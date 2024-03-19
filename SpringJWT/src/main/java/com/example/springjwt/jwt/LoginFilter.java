@@ -37,12 +37,12 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     //authenticationManager 얘를 통해서 인가가 되었다. 그러면 아래 successfulAuthentication 이 작동
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) {
-
+        System.out.println("success");
     }
 
     //실패 하면 하위 작업이 실행
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) {
-
+        System.out.println("fail");
     }
 }
